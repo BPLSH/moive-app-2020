@@ -8,12 +8,12 @@ function Movie({id, year, title, summary, poster, genres}){
         <img src={poster} alt={title} title={title} />
         <h3 className="movie__title">{title}</h3>
         <h5 className="movie__year">{year}</h5>
-        <p className="movie__summary">{summary}</p>
         <ul className="genres">
-          {genres.map(genre => (
-            <li calssNmae="genres_genre">{genres}</li>
+          {genres.map((genre, index) => (
+            <li key={index} classNmae="genres_genre">{genres}</li>
           ))}
         </ul>
+        <p className="movie__summary">{summary}</p>
       </div>
     )
 }
